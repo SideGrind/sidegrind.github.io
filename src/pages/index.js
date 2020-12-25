@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import Spotlight from '../components/Spotlight'
 import Members from '../components/Members'
+import Header from '../components/Header'
 
 class Index extends React.Component {
   constructor(props) {
@@ -28,10 +29,12 @@ class Index extends React.Component {
       <Layout>
         <Helmet title="Gatsby Starter - Stellar" />
 
+        <Header />
+
         <Waypoint
           onEnter={this._handleWaypointEnter}
           onLeave={this._handleWaypointLeave}
-        ></Waypoint>
+        />
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
