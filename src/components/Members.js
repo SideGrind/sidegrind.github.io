@@ -15,10 +15,8 @@ const Members = props => (
       />
       <GridItem
         item_icon="fa-copy"
-        item_title="Member B"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
+        item_title="Hisean Valdez"
+        item_description="Software Architect | 'Current Project'"
       />
       <GridItem
         item_icon="fa-diamond"
@@ -27,8 +25,6 @@ const Members = props => (
                         Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
                         consequat tempus veroeros sed consequat."
       />
-    </GridRow>
-    <GridRow>
       <GridItem
         item_icon="fa-code"
         item_title="Member D"

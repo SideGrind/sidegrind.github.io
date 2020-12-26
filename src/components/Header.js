@@ -12,9 +12,6 @@ const Header = props => (
       backgroundSize: '100%, 100%',
     }}
   >
-    <span className="logo">
-      <img src={logo} alt="" />
-    </span>
     <h1>Stellar</h1>
     <p>
       Just another free, fully responsive site template
