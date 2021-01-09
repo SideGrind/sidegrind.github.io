@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "bootstrap": "^4.5.3",
     "gatsby": "^2.19.32",
     "gatsby-plugin-manifest": "^2.2.44",
     "gatsby-plugin-offline": "^3.0.37",
@@ -11,6 +13,7 @@
     "gatsby-plugin-sass": "^2.1.30",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-scroll-to-element": "^0.2.0",

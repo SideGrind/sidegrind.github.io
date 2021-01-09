@@ -1,51 +1,52 @@
 import React from 'react'
 import Grid from '../components/Grid'
 import GridRow from '../components/GridRow'
-import GridItem from '../components/GridItem'
+import TestAvatar from '../assets/images/TestAvatar.png'
+import TestAvatar2 from '../assets/images/TestAvatar2.png'
+import { Link } from 'gatsby'
+import Card from '@material-ui/core/Card'
+import CardMedia from '@material-ui/core/CardMedia'
+import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
 
-const Members = props => (
+const MemberLists = [
+  {
+    name: 'Shiela Mae Bobadilla',
+    text: 'Underwater and Confused',
+    avatar: TestAvatar,
+  },
+  {
+    name: 'Hisean Valdez',
+    text: "Software Architect | 'Current Project'",
+    avatar: TestAvatar,
+  },
+  { name: 'Clarice Pocot', text: 'Umawra', avatar: TestAvatar2 },
+  { name: 'Member D', text: 'Sample Text', avatar: TestAvatar },
+  { name: 'Member E', text: 'Sample Text', avatar: TestAvatar },
+  { name: 'Member F', text: 'Sample Text', avatar: TestAvatar },
+  { name: 'Member G', text: 'Sample Text', avatar: TestAvatar },
+  { name: 'Member H', text: 'Sample Text', avatar: TestAvatar },
+  { name: 'Member I', text: 'Sample Text', avatar: TestAvatar },
+]
+
+const Members = () => (
   <Grid title="Our Members">
     <GridRow>
-      <GridItem
-        item_icon="fa-code"
-        item_title="Member A"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
-      />
-      <GridItem
-        item_icon="fa-copy"
-        item_title="Hisean Valdez"
-        item_description="Software Architect | 'Current Project'"
-      />
-      <GridItem
-        item_icon="fa-diamond"
-        item_title="Member C"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
-      />
-      <GridItem
-        item_icon="fa-code"
-        item_title="Member D"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
-      />
-      <GridItem
-        item_icon="fa-copy"
-        item_title="Member E"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
-      />
-      <GridItem
-        item_icon="fa-diamond"
-        item_title="Member F"
-        item_description="
-                        Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                        consequat tempus veroeros sed consequat."
-      />
+      {MemberLists.map(Member => (
+        <Link to="/generic">
+          <Card>
+            <CardMedia
+              component="img"
+              image={Member.avatar}
+              title="Test alt text"
+            />
+            <CardContent>
+              <Typography variant="h5">{Member.name}</Typography>
+              <Typography variant="body2">{Member.text}</Typography>
+            </CardContent>
+          </Card>
+        </Link>
+      ))}
     </GridRow>
   </Grid>
 )
